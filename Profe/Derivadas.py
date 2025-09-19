@@ -18,10 +18,10 @@ def calcular_derivada_n_en_punto(funcion_str, variable_str, n, punto):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    funcion = "(log(x+1)/(x))"   # Función que quieras
+    funcion = "sqrt(2) * exp(x**2)"   # Función que quieras
     variable = "x"
-    n = 1                         # Orden de la derivada
-    punto = 0.5           # Punto en el que se evalúa
+    n = 2                        # Orden de la derivada
+    punto = 0.5                  # Punto en el que se evalúa
 
     derivada, valor = calcular_derivada_n_en_punto(funcion, variable, n, punto)
     

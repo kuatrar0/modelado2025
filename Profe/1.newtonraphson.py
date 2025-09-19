@@ -1,7 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.misc import derivative
 from tabulate import tabulate
+
+# Función para calcular la derivada numérica
+def derivative(f, x, dx=1e-6):
+    """
+    Calcula la derivada numérica de una función usando diferencias finitas centrales
+    """
+    return (f(x + dx) - f(x - dx)) / (2 * dx)
 
 # Método de Newton-Raphson
 def newton_raphson(f, valor_inicial, iteraciones=100, tolerancia=1e-6, precision=5):
@@ -42,10 +48,10 @@ def graficar(f, raiz):
 
 # Definir la función para la cual quieres encontrar la raíz
 def f(x):
-    return x**3 - x-4
+    return np.exp(x) - 3*x**2
 
 # Valor inicial
-valor_inicial = 1.0
+valor_inicial = 0.5
 
 # Encontrar la raíz utilizando el método de Newton-Raphson
 raiz = newton_raphson(f, valor_inicial)

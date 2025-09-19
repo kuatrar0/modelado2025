@@ -57,16 +57,16 @@ def solve_and_compare(f_numeric, exact_sol, x_vals, y0):
 def main():
     # EDO: dy/dx = cos(x) + x, y(0) = 1
     y0 = 1
-    h = np.pi / 8
-    x_vals = np.arange(0, np.pi / 2 + h, h)
+    h = np.pi / 10
+    x_vals = np.arange(0, np.pi + h, h)
 
     # Definición numérica de f(x, y)
     def f_numeric(x, y):
-        return np.cos(x) + x
+        return y*np.sin(x) 
 
     # Solución exacta: y(x) = sin(x) + x**2 / 2 + 1
     def exact_sol(x):
-        return np.sin(x) + 0.5 * x**2 + 1
+        return np.exp(1)*np.exp(-np.cos(x))
 
     solve_and_compare(f_numeric, exact_sol, x_vals, y0)
 

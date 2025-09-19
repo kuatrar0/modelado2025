@@ -8,11 +8,11 @@ np.random.seed(semilla)
 
 # Definición de la función a integrar
 def f(x, y):
-    return x*np.exp(y)
+    return np.exp(2*x-y)
 
 # Dominio de integración
 a, b = 0, 1
-c, d = 1, 3
+c, d = 1, 2
 area = (b - a) * (d - c)
 
 # Muestra aleatoria
