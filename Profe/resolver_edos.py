@@ -76,12 +76,12 @@ def resolver_edo_completa(edo_str, variable_independiente='x', variable_dependie
         print("❌ No se pudo resolver la EDO con ningún método disponible")
         return None, None, tipo_edo
     
-        if mostrar_pasos:
-            print("PASO 2: Resolución paso a paso")
-            print("-" * 50)
-            mostrar_pasos_resolucion(edo_str, tipo_edo, var_indep, var_dep)
-            print(f"✅ EDO resuelta usando: {metodo_usado}")
-            print()
+    if mostrar_pasos:
+        print("PASO 2: Resolución paso a paso")
+        print("-" * 50)
+        mostrar_pasos_resolucion(edo_str, tipo_edo, var_indep, var_dep)
+        print(f"✅ EDO resuelta usando: {metodo_usado}")
+        print()
     
     # PASO 3: Aplicar condiciones iniciales
     solucion_particular = None
